@@ -1,0 +1,11 @@
+<h1>This is a list of all of the companies</h1>
+<ol>
+
+<% @companies.each do |company| %>
+
+<li>
+ <%= link_to company.name, company_path(company) %>
+</li>
+<% end %>
+
+</ol>

@@ -1,0 +1,14 @@
+<h1>Here are all the jobs from all the companies </h1>
+
+<%= form_tag(companies_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<ol>
+  <% @hirings.each do |hiring| %>
+  <li>
+    <%= hiring.job_title %>
+  </li>
+  <% end %>
+</ol>

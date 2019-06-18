@@ -1,0 +1,18 @@
+<h1>Here is all of the info on this <%= "#{@company.name}'s" %> jobs  </h1>
+
+<!-- we will get cute and add the company name above later -->
+<ol>
+
+<% @company.hirings.each do |job|%>
+<li>
+<h3>Job title: <%= job.job_title %></h3>
+<p>Job field: <%= job.job_field %></p>
+<p>Job type: <%= job.seniority %></p>
+<p>Key skills: <%= job.job_key_skill %></p>
+<p>employment type: <%= job.job_employment_type %></p>
+<p>Education requirement:<%= job.job_education_level %></p>
+</li>
+<% end %>
+</ol>
+
+<%= button_to "All Companies Page", companies_path, :method => "get" %>

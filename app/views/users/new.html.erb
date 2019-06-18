@@ -1,0 +1,12 @@
+<h1>Create a profile!</h1>
+
+<%= form_for @user do |f| %>
+<label for="username">Username:</label>
+ <%= f.text_field :username %><br />
+  <label for="password">Password:</label>
+ <%= f.text_field :password %><br />
+  <label for="name">Full name:</label>
+  <%= f.text_field :name %><br />
+
+<%= f.submit %>
+<% end %>
