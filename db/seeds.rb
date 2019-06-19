@@ -22,7 +22,7 @@ Hiring.destroy_all
 Company.destroy_all
 
 
-  greg = User.create(name: "Greg", username: "Dwire", password: 'pass123')
+
 
 
 50.times do
@@ -46,6 +46,18 @@ end
       )
     end
 
-    5.times do
-      Search.create(user: greg,  hiring: Hiring.all.sample)
+    100.times do
+      User.create(
+        name: Faker::FunnyName.name,
+        username: Faker::FunnyName.name,
+        password: "123",
+        search: Hiring.all.sample.job_title
+      )
+
+# greg = User.create(name: "Greg", username: "Dwire", password: 'pass123')
+    end
+
+
+    100.times do
+      Search.create(user: User.all.sample,  hiring: Hiring.all.sample)
     end

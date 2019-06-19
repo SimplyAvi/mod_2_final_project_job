@@ -1,7 +1,7 @@
 class CompaniesController < ApplicationController
 
   def index
-    byebug
+    # byebug
     # if params search then
     # @companies = not all but just ones that match params[:search]
     #else

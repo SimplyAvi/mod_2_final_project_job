@@ -1,14 +1,19 @@
+<%= button_to "Login" %>
+
+
 <h1>Here are all the jobs from all the companies </h1>
 
-<%= form_tag(companies_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+<%= form_tag(hirings_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Jobs" %>
   <%= submit_tag "Search" %>
 <% end %>
 
 <ol>
-  <% @hirings.each do |hiring| %>
+  <%# <% byebug %>
+  <% @search.each do |search| %>
   <li>
-    <%= hiring.job_title %>
+    <%= link_to search.job_title , hiring_path(search) %>
   </li>
+
   <% end %>
 </ol>

@@ -1,0 +1,12 @@
+<h1>These are all of the favorited jobs!</h1>
+<ol>
+
+<% @searches.each do |search| %>
+
+<li>
+  <%=link_to search.hiring.job_title, search_path(search)  %>
+
+</li>
+
+<% end %>
+</ol>
