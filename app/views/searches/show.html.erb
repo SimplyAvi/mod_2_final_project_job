@@ -1,0 +1,28 @@
+<h3>Here is more info on the job from <%= @search.hiring.company.name %>   </h3>
+<ul>
+  <li>
+Title: <%= @search.hiring.job_title %>
+</li>
+<li>Field:
+<%= @search.hiring.job_field %>
+</li>
+<li>
+  Seniority:
+<%= @search.hiring.seniority %>
+</li>
+<li>Position:
+<%= @search.hiring.job_position %>
+</li>
+<li>
+  Key skills:
+<%= @search.hiring.job_key_skill %>
+</li>
+<li>
+  Employment type:
+<%= @search.hiring.job_employment_type %>
+</li>
+  Education level:
+<%= @search.hiring.job_education_level %>
+
+</ul>
+<%= button_to "Go Back to Your Favorites!!", searches_path, method: :get %>

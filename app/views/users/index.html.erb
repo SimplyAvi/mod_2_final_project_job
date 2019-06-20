@@ -1,0 +1,7 @@
+<%= form_tag(users_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+  <%= submit_tag "Search" %>
+  <% end %>
+
+<%= button_to "Edit Profile", edit_user_path(@user), method: :get %><br>
+<%= button_to "Delete Profile", users_path, method: :delete%>
